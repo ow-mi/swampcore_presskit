@@ -1,0 +1,48 @@
+{
+  "name": "swampcore-presskit",
+  "version": "1.0.0",
+  "description": "Swampcore DJ Presskit - Dark psychedelic swamp trance",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx http-server -p 3000 -o",
+    "build": "npm run minify-css && npm run minify-js",
+    "minify-css": "npx clean-css-cli -o styles.min.css styles.css",
+    "minify-js": "npx terser script.js -c -m -o script.min.js",
+    "serve": "npx http-server -p 8080",
+    "lint": "npx eslint script.js",
+    "format": "npx prettier --write \"*.{html,css,js}\"",
+    "optimize-images": "npx imagemin '**/*.{jpg,jpeg,png}' --out-dir=optimized/",
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "keywords": [
+    "dj",
+    "presskit",
+    "swampcore",
+    "electronic-music",
+    "psychedelic",
+    "tech-trance",
+    "dark-ambient"
+  ],
+  "author": "Swampcore",
+  "license": "MIT",
+  "devDependencies": {
+    "clean-css-cli": "^5.6.2",
+    "eslint": "^8.57.0",
+    "http-server": "^14.1.1",
+    "imagemin": "^8.0.1",
+    "imagemin-mozjpeg": "^10.0.0",
+    "imagemin-pngquant": "^9.0.2",
+    "prettier": "^3.2.5",
+    "terser": "^5.29.1"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/swampcore/presskit.git"
+  },
+  "homepage": "https://swampcore.github.io/presskit"
+} 
